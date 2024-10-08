@@ -1,6 +1,6 @@
-# Presentation Slides for the Presentation on the Basics of Git
+# Slides for the Presentation on the Basic concepts of Git
 
-Language: German
+The slides are in German, they were used during the [Ophase 2024](https://www.fachschaft.informatik.tu-darmstadt.de/de/studium/anfaenger/owo).
 
 To build these slides, use [Marp](https://github.com/marp-team/marp):
 Run `marp git.md` on a system with a working Marp installation.
