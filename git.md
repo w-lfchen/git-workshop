@@ -80,13 +80,13 @@ In VSCode kann man per Command Palette meistens die entsprechenden Commands find
 
 ---
 
-# Git und GitHub
+# Git und GitHub/GitLab
 
-- Git ist das System, auf dem GitHub basiert
-- GitHub ermöglicht die Veröffentlichung von Git-Verzeichnissen
+- Git ist das System, auf dem GitHub und GitLab basieren
+- Plattformen ermöglichen Veröffentlichung von Git-Verzeichnissen
   (sog. Repos, kurz für "Repository")
 - Es gibt hierfür auch andere Plattformen
-  GitLab, Codeberg, SourceHut, Gitea, ...
+  Codeberg, SourceHut, Gitea, ...
 - GitHub ist "nur" die populärste Plattform
 
 Solche Plattformen haben meist noch weitere Features, die bei der Entwicklung unterstützen, aber mit Git nicht unbedingt verknüpft sind
@@ -119,7 +119,7 @@ Vor dem Committen muss Git wissen, welche Änderungen festgehalten werden sollen
   - Eine Diff (über eine oder mehrere Dateien)
   - Eine Commit-Nachricht
   - Metadaten (Autor, Zeitpunkt, ...)
-- `git commit` erstellt einen Commit
+- `git commit` erstellt einen Commit in der lokalen Historie
   - Hält die Änderungen fest, die staged sind
 
 ---
@@ -194,7 +194,7 @@ Befehle für die Arbeit mit Branches:
 - Git funktioniert somit auch bis auf diese Befehle vollständig offline
 - Remote:
   Git-Verzeichnis, das nicht auf dem eigenen System vorhanden ist, welches aber von einem lokalen Repo "getracked" wird
-  Beispiel: Die Hausübungsvorlagen der FOP (GitHub-Repos)
+  Beispiel: Die Hausübungsvorlagen der FoP (GitHub-Repos)
 
 ---
 
@@ -245,7 +245,7 @@ $\to$ Der einzige Weg, wie man Zustand in einer Remote verändert
 
 ###### Sicherheitsbelehrung
 
-- Wenn `git push` auf einen bestehenden Branch ausgeführt wird, muss die History übereinstimmen
+- Wenn `git push` auf einen bestehenden Branch ausgeführt wird, muss die Historie übereinstimmen
 (alle Remote-Commits müssen im lokalen Branch vorhanden sein)
   **$\to$ Daher immer vor dem pushen pullen**
 - **Force-Push nur nach Absprache und wenn man weiß, was man tut**
@@ -313,6 +313,7 @@ An allen Stellen (eine oder mehrere Zeilen) mit Konflikten findet sich in den Da
 # Abschluss
 
 - **Niemals Credentials (Passwörter, API-Keys, ...) comitten**
+  Falls dies passiert, muss man die Geschichte umschreiben
 
 - Möglichst wenig Binärdateien comitten
   In der `.gitignore`-Datei können Dateien von Git ignoriert werden
