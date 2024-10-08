@@ -97,7 +97,22 @@ git speichert alles, was es braucht, im Unterverzeichnis `.git`
 
 ---
 
+# Staging
+
+Vor dem Committen muss git wissen, welche Änderungen festgehalten werden sollen
+
+![w:850](https://bobbyhadz.com/images/blog/vscode-highlight-modified-lines/stage-and-unstage-file-to-see-highlighted-changes.gif)
+
+---
+
 # Commits
+
+- Ein Commit ist ein Snapshot des Repos zu einem Zeitpunkt
+- Commits enthalten:
+  - Eine Diff (über eine oder mehrere Dateien)
+  - Metadaten (Nachricht, Autor, Zeitpunkt, ...)
+- `git commit` erstellt einen Commit
+  - Hält die Änderungen fest, die staged sind
 
 ---
 
