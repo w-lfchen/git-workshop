@@ -8,7 +8,12 @@
       pkgs = import nixpkgs { inherit system; };
     in
     {
-      devShells.${system}.default = pkgs.mkShell { packages = with pkgs; [ marp-cli ]; };
+      devShells.${system}.default = pkgs.mkShell {
+        packages = with pkgs; [
+          chromium # for pdf export
+          marp-cli
+        ];
+      };
       formatter.${system} = pkgs.nixfmt-rfc-style;
     };
 }
