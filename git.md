@@ -14,7 +14,7 @@ math: mathjax
     text-align: left;
   }
   h6 {
-    margin-top: -1.5em;
+    margin-top: -1.4em;
   }
   ul, ol {
     margin-left: 0;
@@ -73,10 +73,7 @@ Versionsverwaltungssysteme ermöglichen u.a.:
 - Free und open source
 - Fokus auf Geschwindigkeit und nicht-lineare Workflows
 
-Kann sowohl als Terminal-Applikation als auch mit GUIs genutzt werden (z.B. durch Editor-Plugins)
-
-Befehle in `teletext` sind Git-Befehle, die so ins Terminal eingegeben werden können, um sie auszuführen.
-In VSCode kann man per Command Palette meistens die entsprechenden Commands finden, sonst muss man im GUI oder Internet suchen
+Kann sowohl als Terminal-Applikation als auch mit GUIs, die Git im Hintergrund ausführen, genutzt werden (z.B. durch Editor-Plugins)
 
 ---
 
@@ -100,15 +97,16 @@ Repo erstellen:
 - `git clone <url>` klont ein Repo von einer gegebenen URL
 - `git init` initialisiert ein neues Git-Repo im aktuellen Verzeichnis
 
-git speichert alles, was es braucht, im Unterverzeichnis `.git`
+Git speichert alles, was es braucht, im Unterverzeichnis `.git`
 
 ---
 
 # Staging
 
-Vor dem Committen muss Git wissen, welche Änderungen festgehalten werden sollen (Befehl: `git add`)
-
-![w:850](https://bobbyhadz.com/images/blog/vscode-highlight-modified-lines/stage-and-unstage-file-to-see-highlighted-changes.gif)
+- Vor dem Committen muss Git wissen, welche Änderungen festgehalten werden sollen
+- Git betrachtet nur Differenzen zwischen dem bekannten Zustand der Datei und der aktuellen Version
+- `git add` markiert ("staged") diese Diffs
+- Weitere Änderungen müssen erneut gestaged werden
 
 ---
 
@@ -120,7 +118,9 @@ Vor dem Committen muss Git wissen, welche Änderungen festgehalten werden sollen
   - Eine Commit-Nachricht
   - Metadaten (Autor, Zeitpunkt, ...)
 - `git commit` erstellt einen Commit in der lokalen Historie
-  - Hält die Änderungen fest, die staged sind
+  - Hält genau die Änderungen fest, die staged sind
+- Aus allen Daten wird ein Hash berechnet
+  - Über diesen können Commits eindeutig identitifziert werden
 
 ---
 
